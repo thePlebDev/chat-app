@@ -6,4 +6,37 @@ npm scripts
 - the scripts label are commands that you might need to run again and again
 - you type in the keys into the command prompt, so npm start, to start the application and npm test to test the application
 - when you are using custom scripts you must call the command npm run customScript, the reason that npm test and run work
-is because that node assumes that those commands will exist 
+is because that node assumes that those commands will exist
+
+WHAT IS HAPPENING WITH MY SERVER FILE
+-first we import things with the require module
+- then we have a handle error function that takes two arguments. a request object and a response object.
+
+ok so what is response object.
+- so the response object is from the createServer function
+what is the createrServer  function
+- the createServer function takes one parameter called a request listener. that is a callback function
+- that is a function that gets called each time the server gets a request
+- the callback function(requestListener) function handles requests from the user, and also the response back to the user.
+- the request parameter, the Request object, represents an incomingMessage obejct.
+- the second parameter represents the serverResposne object.
+
+- the request object.
+-req.url reqturns the request URL string
+
+the response object
+-res.end(), signals that the server should consider that the resposne is complete. this must be called at the end of each response
+- if data is specified then it has similar im response to response.write(data). I think it basically says that the
+the action is over and return the data that was requested. will have to look as the fs.readFile() for more info.
+
+-The Node.js File System Module.
+- we are using its readfile methods
+- the fileName takes a file path and a callback function.  the callback function has a data and a error parameter. So if there
+is an error we must deal with the error but if there is no error then we use the data parameter which is the contents of the object
+
+
+THE EXACT.JS FILE
+- first we import the Path module
+- and we call the .resolve() method which will resolve a sequence of paths or path segments into an absolute path
+- so our extract file is literally returning the whole file path to the file that we want to server and then we use its contents and 
+display them to the web page.
