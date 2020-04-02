@@ -1,0 +1,9 @@
+- the packet.json file acts as the Node project manifest. It holds the projects name, version number, description and other
+information. this file can be created by hand but it is easier if you let npm do it for you.
+- you will create the packet.json with the npm init command.
+
+npm scripts
+- the scripts label are commands that you might need to run again and again
+- you type in the keys into the command prompt, so npm start, to start the application and npm test to test the application
+- when you are using custom scripts you must call the command npm run customScript, the reason that npm test and run work
+is because that node assumes that those commands will exist 
